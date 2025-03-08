@@ -1,0 +1,1 @@
+{"root":["./src/index.ts","./src/server.ts","./src/config/connectdb.ts","./src/controllers/authcontrollers.ts","./src/controllers/jobcontrollers.ts","./src/controllers/swipecontrollers.ts","./src/middleware/authmiddleware.ts","./src/models/jobmodel.ts","./src/models/usermodel.ts","./src/routes/auth.ts","./src/routes/jobs.ts","./src/routes/swipe.ts"],"version":"5.8.2"}
