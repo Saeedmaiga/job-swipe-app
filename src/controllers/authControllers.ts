@@ -3,11 +3,16 @@ import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 import User from "../models/userModel";
 
-// Register a new user
+// ✅ Register a new user
 export const registerUser = async (req: Request, res: Response): Promise<void> => {
   const { name, email, password } = req.body;
 
   try {
+    if (!name || !email || !password) {
+      res.status(400).json({ msg: "Please provide name, email, and password" });
+      return;
+    }
+
     let user = await User.findOne({ email });
     if (user) {
       res.status(400).json({ msg: "User already exists" });
@@ -25,7 +30,7 @@ export const registerUser = async (req: Request, res: Response): Promise<void> =
   }
 };
 
-// Login a user
+// ✅ Login user
 export const loginUser = async (req: Request, res: Response): Promise<void> => {
   const { email, password } = req.body;
 
