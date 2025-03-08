@@ -8,7 +8,7 @@ interface AuthRequest extends Request {
   user?: { id: string };
 }
 
-// ✅ User swipes right (Interested)
+// User swipes right (Interested)
 export const swipeRight = async (req: AuthRequest, res: Response): Promise<void> => {
   const { userId, jobId } = req.body;
 
@@ -44,7 +44,7 @@ export const swipeRight = async (req: AuthRequest, res: Response): Promise<void>
   }
 };
 
-// ✅ User swipes left (Pass)
+//  User swipes left (Pass)
 export const swipeLeft = async (req: AuthRequest, res: Response): Promise<void> => {
   const { userId, jobId } = req.body;
 
@@ -72,7 +72,7 @@ export const swipeLeft = async (req: AuthRequest, res: Response): Promise<void> 
   }
 };
 
-// ✅ Get a user's swiped jobs (Interested Jobs)
+//  Get a user's swiped jobs (Interested Jobs)
 export const getSwipedJobs = async (req: Request, res: Response): Promise<void> => {
   const { userId } = req.params;
 
